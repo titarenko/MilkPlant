@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
+using MilkPlant.EntityBackend;
 
 namespace MilkPlant.WebUi
 {
@@ -42,6 +43,8 @@ namespace MilkPlant.WebUi
 
             builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
+
+            builder.RegisterAssemblyTypes(Assembly.GetAssembly(typeof (ProductAnalytics))).AsImplementedInterfaces();
 
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }

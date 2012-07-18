@@ -57,9 +57,6 @@
     <Reference Include="EcmaScript.NET.modified">
       <HintPath>..\packages\YUICompressor.NET.1.7.1.0\lib\net35\EcmaScript.NET.modified.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Fasterflect">
       <HintPath>..\packages\fasterflect.2.1.0\lib\net40\Fasterflect.dll</HintPath>
     </Reference>
@@ -199,6 +196,10 @@
     <None Include="combres.readme" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MilkPlant.EntityBackend\MilkPlant.EntityBackend.csproj">
+      <Project>{26B68A49-505C-49DA-9FD8-2F9F2253B06D}</Project>
+      <Name>MilkPlant.EntityBackend</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MilkPlant.Interfaces\MilkPlant.Interfaces.csproj">
       <Project>{E175B593-C075-4A4F-8C99-C93D2667FEB9}</Project>
       <Name>MilkPlant.Interfaces</Name>
