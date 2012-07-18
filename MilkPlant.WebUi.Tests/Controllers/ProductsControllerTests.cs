@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using FizzWare.NBuilder;
 using MilkPlant.Interfaces;
 using MilkPlant.Interfaces.Models;
+using MilkPlant.Interfaces.Projections;
 using MilkPlant.WebUi.Controllers;
 using NSubstitute;
 using NUnit.Framework;

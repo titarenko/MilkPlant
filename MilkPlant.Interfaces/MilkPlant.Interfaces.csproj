@@ -36,7 +36,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProductAnalytics.cs" />
-    <Compile Include="Models\BestSeller.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Models\Base\Identifiable.cs" />
+    <Compile Include="Models\Base\Named.cs" />
+    <Compile Include="Models\Distributor.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SoldItems.cs" />
+    <Compile Include="Projections\BestSeller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

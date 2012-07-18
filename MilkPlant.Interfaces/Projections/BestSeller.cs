@@ -1,4 +1,4 @@
-namespace MilkPlant.Interfaces.Models
+namespace MilkPlant.Interfaces.Projections
 {
     public class BestSeller
     {
