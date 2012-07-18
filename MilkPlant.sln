@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.WebUi", "MilkPlan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.Interfaces", "MilkPlant.Interfaces\MilkPlant.Interfaces.csproj", "{E175B593-C075-4A4F-8C99-C93D2667FEB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.WebUi.Tests", "MilkPlant.WebUi.Tests\MilkPlant.WebUi.Tests.csproj", "{4B009149-5EFC-4259-8FEC-E67185FC83B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{E175B593-C075-4A4F-8C99-C93D2667FEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E175B593-C075-4A4F-8C99-C93D2667FEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E175B593-C075-4A4F-8C99-C93D2667FEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B009149-5EFC-4259-8FEC-E67185FC83B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B009149-5EFC-4259-8FEC-E67185FC83B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B009149-5EFC-4259-8FEC-E67185FC83B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B009149-5EFC-4259-8FEC-E67185FC83B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
