@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MilkPlant.Interfaces.Models.BestSeller>
+
+<div class="container">
+    <table class="table">
+        <caption>Best Sellers</caption>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Distributor</th>
+                <th>Sales Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Distributor</td>
+                    <td>@item.SalesVolume</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
