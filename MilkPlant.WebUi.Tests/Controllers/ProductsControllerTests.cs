@@ -25,7 +25,7 @@ namespace MilkPlant.WebUi.Tests.Controllers
                                 .All()
                                 .With(x => x.Name = "Best")
                                 .Build());
-            var controller = new ProductsController(analytics);
+            var controller = new ProductsController(analytics, null);
 
             // act
             var result = (ViewResult) controller.BestSellers();
