@@ -17,15 +17,17 @@ namespace MilkPlant.TestDataGenerator
     {
         private readonly IStorage storage;
         private readonly IFactory factory;
+        private readonly IProgressReporter progressReporter;
 
-        public Create() : this(new Storage(new AppConfiguration()), new Factory())
+        public Create() : this(new Storage(new AppConfiguration()), new Factory(), new ConsoleProgressReporter())
         {
         }
 
-        public Create(IStorage storage, IFactory factory)
+        public Create(IStorage storage, IFactory factory, IProgressReporter progressReporter)
         {
             this.storage = storage;
             this.factory = factory;
+            this.progressReporter = progressReporter;
         }
 
         [Description("Creates specified number of products with random names.")]
@@ -47,10 +49,13 @@ namespace MilkPlant.TestDataGenerator
         [Description("Creates specified number of sold item records with random distributors and products.")]
         public void SoldItems(Options options)
         {
+            progressReporter.Start("creation of sold items");
+
             var products = GetRandomItemPicker<Product>();
             var distributors = GetRandomItemPicker<Distributor>();
             var collection = storage.Collection<SoldItem>();
-            while (options.Count-- > 0)
+            var index = options.Count;
+            while (index-- > 0)
             {
                 collection.Save(new SoldItem
                 {
@@ -59,7 +64,10 @@ namespace MilkPlant.TestDataGenerator
                     ProductId = products.Pick(),
                     Quantity = GetRandomQuantity()
                 });
+                progressReporter.Porgress(options.Count - index - 1, options.Count);
             }
+
+            progressReporter.Finish();
         }
 
         private decimal GetRandomQuantity()
@@ -74,11 +82,17 @@ namespace MilkPlant.TestDataGenerator
 
         private void Collection<T>(Options options, Func<string> nameGenerator) where T : Named, new()
         {
+            progressReporter.Start(string.Format("creation of {0}s", typeof(T).Name.ToLower()));
+
             var collection = storage.Collection<T>();
-            while (options.Count-- > 0)
+            var index = options.Count;
+            while (index-- > 0)
             {
                 collection.Save(new T {Name = nameGenerator()});
+                progressReporter.Porgress(options.Count - index - 1, options.Count);
             }
+
+            progressReporter.Finish();
         }
     }
 }

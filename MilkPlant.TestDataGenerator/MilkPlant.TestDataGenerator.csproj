@@ -52,6 +52,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleProgressReporter.cs" />
+    <Compile Include="IProgressReporter.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Create.cs" />
     <Compile Include="Program.cs" />
