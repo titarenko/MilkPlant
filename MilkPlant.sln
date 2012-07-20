@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{11BE99
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.RestClient", "MilkPlant.RestClient\MilkPlant.RestClient.csproj", "{8CF75D5D-5663-4E7E-B719-0D4CA353A8E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.Shared", "MilkPlant.Shared\MilkPlant.Shared.csproj", "{D548B0F8-F29F-4FD8-A753-5090A5F0CCA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{26B68A49-505C-49DA-9FD8-2F9F2253B06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B68A49-505C-49DA-9FD8-2F9F2253B06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B68A49-505C-49DA-9FD8-2F9F2253B06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF75D5D-5663-4E7E-B719-0D4CA353A8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF75D5D-5663-4E7E-B719-0D4CA353A8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF75D5D-5663-4E7E-B719-0D4CA353A8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF75D5D-5663-4E7E-B719-0D4CA353A8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D548B0F8-F29F-4FD8-A753-5090A5F0CCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D548B0F8-F29F-4FD8-A753-5090A5F0CCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D548B0F8-F29F-4FD8-A753-5090A5F0CCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D548B0F8-F29F-4FD8-A753-5090A5F0CCA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
