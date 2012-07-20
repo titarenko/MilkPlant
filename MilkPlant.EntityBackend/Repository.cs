@@ -1,6 +1,8 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using MilkPlant.Interfaces;
 using MilkPlant.Interfaces.Models.Base;
+using System.Linq;
 
 namespace MilkPlant.EntityBackend
 {
@@ -19,6 +21,11 @@ namespace MilkPlant.EntityBackend
                 context.Entry(instance).State = EntityState.Modified;
             }
             context.SaveChanges();
+        }
+
+        public IEnumerable<T> GetAll<T>() where T : Identifiable
+        {
+            return context.Set<T>().ToList();
         }
     }
 }

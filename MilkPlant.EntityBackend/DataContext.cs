@@ -14,6 +14,7 @@ namespace MilkPlant.EntityBackend
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<DataContext>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, MigrationConfiguration>());
             base.OnModelCreating(modelBuilder);
         }
     }

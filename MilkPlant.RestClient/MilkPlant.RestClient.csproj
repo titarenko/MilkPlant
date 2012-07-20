@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collection.cs" />
+    <Compile Include="ICollection.cs" />
+    <Compile Include="IStorage.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

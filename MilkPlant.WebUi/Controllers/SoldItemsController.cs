@@ -15,7 +15,7 @@ namespace MilkPlant.WebUi.Controllers
 
         #region REST API
 
-        [ActionName("Index"), HttpPut, HttpPost]
+        [ActionName("Index"), HttpPost]
         public void Save(SoldItem item)
         {
             repository.Save(item);

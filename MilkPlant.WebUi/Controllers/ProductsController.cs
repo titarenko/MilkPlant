@@ -22,7 +22,13 @@ namespace MilkPlant.WebUi.Controllers
 
         #region REST API
 
-        [ActionName("Index"), HttpPost, HttpPut]
+        [ActionName("Index"), HttpGet]
+        public JsonResult GetAll()
+        {
+            return Json(repository.GetAll<Product>(), JsonRequestBehavior.AllowGet);
+        }
+
+        [ActionName("Index"), HttpPost]
         public void Save(Product product)
         {
             repository.Save(product);

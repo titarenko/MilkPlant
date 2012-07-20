@@ -5,7 +5,11 @@ namespace MilkPlant.Interfaces.Models
 {
     public class SoldItem : Identifiable
     {
+        public int ProductId { get; set; }
+
         public Product Product { get; set; }
+
+        public int DistributorId { get; set; }
 
         public Distributor Distributor { get; set; }
 

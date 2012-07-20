@@ -15,7 +15,13 @@ namespace MilkPlant.WebUi.Controllers
 
         #region REST API
 
-        [ActionName("Index"), HttpPut, HttpPost]
+        [ActionName("Index"), HttpGet]
+        public JsonResult GetAll()
+        {
+            return Json(repository.GetAll<Distributor>(), JsonRequestBehavior.AllowGet);
+        }
+
+        [ActionName("Index"), HttpPost]
         public void Save(Distributor distributor)
         {
             repository.Save(distributor);

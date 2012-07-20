@@ -2,16 +2,16 @@
 
 namespace MilkPlant.RestClient
 {
-    public class Storage
+    public class Storage : IStorage
     {
         private readonly RestSharp.RestClient client;
 
         public Storage(IConfiguration configuration)
         {
-            client = new RestSharp.RestClient(configuration.Get("BaseUrl"));
+            client = new RestSharp.RestClient(configuration.GetValue("BaseUri"));
         }
 
-        public Collection<T> Collection<T>()
+        public ICollection<T> Collection<T>()
         {
             return new Collection<T>(client);
         }

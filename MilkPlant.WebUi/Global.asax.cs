@@ -20,6 +20,12 @@ namespace MilkPlant.WebUi
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "ShortDefault", // Route name
+                "{controller}", // URL with parameters
+                new { controller = "Products", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+            );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Products", action = "BestSellers", id = UrlParameter.Optional } // Parameter defaults
