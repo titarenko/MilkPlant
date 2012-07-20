@@ -41,7 +41,7 @@
     <Compile Include="Models\Base\Named.cs" />
     <Compile Include="Models\Distributor.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\SoldItems.cs" />
+    <Compile Include="Models\SoldItem.cs" />
     <Compile Include="Projections\BestSeller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

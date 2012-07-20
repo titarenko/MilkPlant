@@ -12,7 +12,7 @@ namespace MilkPlant.EntityBackend
 
         public IEnumerable<BestSeller> GetBestSellers(int count)
         {
-            return context.Set<SoldItems>()
+            return context.Set<SoldItem>()
                 .GroupBy(x => x.Product.Id) // group products
                 .OrderByDescending(x => x.Sum(items => items.Quantity)) // order by sales volume
                 .Select(grouping => new BestSeller // select best sellers

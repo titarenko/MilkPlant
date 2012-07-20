@@ -9,7 +9,7 @@ namespace MilkPlant.EntityBackend
 
         public IDbSet<Distributor> Distributors { get; set; }
 
-        public IDbSet<SoldItems> SoldItems { get; set; }
+        public IDbSet<SoldItem> SoldItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

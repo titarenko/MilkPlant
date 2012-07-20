@@ -3,7 +3,7 @@ using MilkPlant.Interfaces.Models.Base;
 
 namespace MilkPlant.Interfaces.Models
 {
-    public class SoldItems : Identifiable
+    public class SoldItem : Identifiable
     {
         public Product Product { get; set; }
 

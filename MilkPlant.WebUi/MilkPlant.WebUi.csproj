@@ -105,7 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Combres.cs" />
+    <Compile Include="Controllers\DistributorsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\SoldItemsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
