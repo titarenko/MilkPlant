@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.Shared", "MilkPla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.TestDataGenerator", "MilkPlant.TestDataGenerator\MilkPlant.TestDataGenerator.csproj", "{22EB970E-3B08-45D2-BB05-5AACE93DFACD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkPlant.XpoBackend", "MilkPlant.XpoBackend\MilkPlant.XpoBackend.csproj", "{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,16 @@ Global
 		{22EB970E-3B08-45D2-BB05-5AACE93DFACD}.Release|Mixed Platforms.Build.0 = Release|x86
 		{22EB970E-3B08-45D2-BB05-5AACE93DFACD}.Release|x86.ActiveCfg = Release|x86
 		{22EB970E-3B08-45D2-BB05-5AACE93DFACD}.Release|x86.Build.0 = Release|x86
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

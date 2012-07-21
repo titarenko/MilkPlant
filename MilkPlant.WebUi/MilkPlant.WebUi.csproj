@@ -214,6 +214,10 @@
       <Project>{E175B593-C075-4A4F-8C99-C93D2667FEB9}</Project>
       <Name>MilkPlant.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MilkPlant.XpoBackend\MilkPlant.XpoBackend.csproj">
+      <Project>{BB403ECD-95E6-4FAF-88DE-A79033F06E1F}</Project>
+      <Name>MilkPlant.XpoBackend</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
