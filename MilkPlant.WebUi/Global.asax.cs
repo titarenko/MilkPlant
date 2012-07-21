@@ -5,11 +5,25 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using MilkPlant.EntityBackend;
+using StackExchange.Profiling;
 
 namespace MilkPlant.WebUi
 {
     public class MvcApplication : HttpApplication
     {
+        public MvcApplication()
+        {
+            BeginRequest +=
+                (sender, args) =>
+                    {
+                        if (Request.IsLocal)
+                        {
+                            MiniProfiler.Start();
+                        }
+                    };
+            EndRequest += (sender, args) => MiniProfiler.Stop();
+        }
+
         private void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -41,6 +55,8 @@ namespace MilkPlant.WebUi
             RegisterRoutes(RouteTable.Routes);
 
             SetDependecyResolver();
+
+            MiniProfilerEF.Initialize();
         }
 
         private void SetDependecyResolver()
