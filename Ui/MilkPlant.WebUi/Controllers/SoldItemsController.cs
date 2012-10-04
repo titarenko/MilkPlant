@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using MilkPlant.Interfaces;
-using MilkPlant.Interfaces.Models;
 
 namespace MilkPlant.WebUi.Controllers
 {

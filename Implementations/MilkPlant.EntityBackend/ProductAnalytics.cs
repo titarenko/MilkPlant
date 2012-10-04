@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using MilkPlant.Interfaces;
-using MilkPlant.Interfaces.Models;
 using MilkPlant.Interfaces.Projections;
 using System.Linq;
 

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MilkPlant.Interfaces.Models.Base.Identifiable">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base\Identifiable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.Base.Named">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base\Named.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.DeliveryPlan">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Product" Type="MilkPlant.Interfaces.Models.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="7.046" />
+        <Point X="3.5" Y="8.75" />
+        <Point X="2.5" Y="8.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAAAgAAAAAAAAAAAABAAAAgAAAAAA=</HashCode>
+      <FileName>Models\DeliveryPlan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Truck" />
+      <Property Name="Distributor" />
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.Distributor">
+    <Position X="5.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Distributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.Product">
+    <Position X="1" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.Truck">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MilkPlant.Interfaces.Models.WarehouseOperation">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Product" Type="MilkPlant.Interfaces.Models.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.375" Y="4.675" />
+        <Point X="8.375" Y="9.062" />
+        <Point X="2.5" Y="9.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAgAAIAAA=</HashCode>
+      <FileName>Models\WarehouseOperation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Distributor" />
+      <Property Name="Product" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="MilkPlant.Interfaces.IDeliveryManager">
+    <Position X="10.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>IDeliveryManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MilkPlant.Interfaces.IReferenceDataManager">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IReferenceDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MilkPlant.Interfaces.IWarehouseManager">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>IWarehouseManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MilkPlant.Interfaces.Models.WarehouseOperationType">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQBAAAAIAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WarehouseOperationType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
