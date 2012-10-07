@@ -1,4 +1,5 @@
-﻿using MilkPlant.Interfaces.Models.Base;
+﻿using System;
+using MilkPlant.Interfaces.Models.Base;
 
 namespace MilkPlant.Interfaces.Models
 {
@@ -26,6 +27,11 @@ namespace MilkPlant.Interfaces.Models
         /// Operation type.
         /// </summary>
         public WarehouseOperationType Type { get; set; }
+
+        /// <summary>
+        /// Date and time of operation.
+        /// </summary>
+        public DateTime Timestamp { get; set; }
 
         /// <summary>
         /// Defines whether company itself is mentioned in this operation.
