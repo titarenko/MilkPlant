@@ -7,22 +7,22 @@ namespace MilkPlant.Shared
     /// <summary>
     /// Provides access to configuration values. Behaves like dictionary.
     /// </summary>
-    public class AppConfiguration : IConfiguration
+    public class Configuration : IConfiguration
     {
         private readonly string prefix;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="Configuration"/> class.
         /// </summary>
-        public AppConfiguration() : this(null)
+        public Configuration() : this(null)
         {
         }
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="Configuration"/> class.
         /// </summary>
         /// <param name="prefix">The prefix.</param>
-        public AppConfiguration(string prefix)
+        public Configuration(string prefix)
         {
             this.prefix = prefix;
         }
@@ -34,7 +34,7 @@ namespace MilkPlant.Shared
         /// <returns>Configuration instance representing requested subsection.</returns>
         public IConfiguration GetSubsection(string name)
         {
-            return new AppConfiguration(name);
+            return new Configuration(name);
         }
 
         /// <summary>

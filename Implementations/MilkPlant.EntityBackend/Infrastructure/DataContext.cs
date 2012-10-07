@@ -1,15 +1,19 @@
-﻿using System.Data.Entity;
+using System.Data.Entity;
 using MilkPlant.Interfaces.Models;
 
-namespace MilkPlant.EntityBackend
+namespace MilkPlant.EntityBackend.Infrastructure
 {
     public class DataContext : DbContext
     {
-        public IDbSet<Product> Products { get; set; }
+        public virtual IDbSet<Product> Products { get; set; }
 
-        public IDbSet<Distributor> Distributors { get; set; }
+        public virtual IDbSet<Distributor> Distributors { get; set; }
 
-        public IDbSet<SoldItem> SoldItems { get; set; }
+        public virtual IDbSet<Truck> Trucks { get; set; }
+
+        public virtual IDbSet<DeliveryPlan> DeliveryPlans { get; set; }
+
+        public virtual IDbSet<WarehouseOperation> WarehouseOperations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

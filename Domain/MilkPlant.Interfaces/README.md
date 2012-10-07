@@ -8,3 +8,7 @@
 [DeliveryPlan]-[Distributor]
 [DeliveryPlan]-[Product]
 [DeliveryPlan]-[Truck]
+
+[IWarehouseManager||void RegisterOperation(WarehouseOperation)]
+[IReferenceDataManager||void AddProduct(Product);void AddTruck(Truck);void AddDistributor(Distributor)]
+[IDeliveryManager||IEnumerable`DeliveryPlan GetDeliveryPlan(DateTime)]

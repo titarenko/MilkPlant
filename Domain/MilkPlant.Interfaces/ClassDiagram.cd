@@ -19,8 +19,8 @@
     <AssociationLine Name="Product" Type="MilkPlant.Interfaces.Models.Product" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="3.5" Y="7.046" />
-        <Point X="3.5" Y="8.75" />
-        <Point X="2.5" Y="8.75" />
+        <Point X="3.5" Y="8.25" />
+        <Point X="2.5" Y="8.25" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -41,7 +41,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MilkPlant.Interfaces.Models.Product">
-    <Position X="1" Y="8.5" Width="1.5" />
+    <Position X="1" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Product.cs</FileName>
@@ -59,8 +59,8 @@
     <AssociationLine Name="Product" Type="MilkPlant.Interfaces.Models.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="8.375" Y="4.675" />
-        <Point X="8.375" Y="9.062" />
-        <Point X="2.5" Y="9.062" />
+        <Point X="8.375" Y="8.562" />
+        <Point X="2.5" Y="8.562" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>

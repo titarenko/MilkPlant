@@ -1,6 +1,6 @@
 using System.Data.Entity.Migrations;
 
-namespace MilkPlant.EntityBackend
+namespace MilkPlant.EntityBackend.Infrastructure
 {
     public class MigrationConfiguration : DbMigrationsConfiguration<DataContext>
     {

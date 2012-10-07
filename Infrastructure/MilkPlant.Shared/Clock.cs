@@ -2,8 +2,9 @@
 
 namespace MilkPlant.Shared
 {
-    public class Clock
+    public static class Clock
     {
-        public static DateTime Now { get { return DateTime.Now; } } 
+        public static DateTime? FreezedTime { get; set; }
+        public static DateTime Now { get { return FreezedTime ?? DateTime.Now; } }
     }
 }
