@@ -32,10 +32,5 @@ namespace MilkPlant.Interfaces.Models
         /// Date and time of operation.
         /// </summary>
         public DateTime Timestamp { get; set; }
-
-        /// <summary>
-        /// Defines whether company itself is mentioned in this operation.
-        /// </summary>
-        public bool IsCompany { get { return Distributor == null; } }
     }
 }

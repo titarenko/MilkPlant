@@ -9,6 +9,8 @@ namespace MilkPlant.EntityBackend
     public class WaybillPool
     {
         private readonly IList<Waybill> waybills;
+        private const int BEGIN_OF_DAY = 8;
+        private const int END_OF_DAY = 20;
 
         public WaybillPool(IEnumerable<Truck> trucks)
         {
@@ -16,7 +18,7 @@ namespace MilkPlant.EntityBackend
                 .Select(truck =>
                         new Waybill
                         {
-                            Departure = Clock.Now.Date + TimeSpan.FromHours(8),
+                            DepartureTime = Clock.Now.Date + TimeSpan.FromHours(BEGIN_OF_DAY),
                             Truck = truck
                         })
                 .ToList();
@@ -38,13 +40,13 @@ namespace MilkPlant.EntityBackend
 
         private void RecycleTruck(Waybill waybill)
         {
-            var departure = waybill.Departure + GetRouteLength(waybill);
-            if (departure.Date < Clock.Now.Date.AddHours(20))
+            var departure = waybill.DepartureTime + GetRouteLength(waybill);
+            if (departure.Date < Clock.Now.Date.AddHours(END_OF_DAY))
             {
                 waybills.Add(
                     new Waybill
                     {
-                        Departure = departure,
+                        DepartureTime = departure,
                         Truck = waybill.Truck
                     });
             }
@@ -52,7 +54,7 @@ namespace MilkPlant.EntityBackend
 
         private static TimeSpan GetRouteLength(Waybill waybill)
         {
-            return TimeSpan.FromHours(2*waybill.Distributor.Distance/waybill.Truck.Speed);
+            return TimeSpan.FromHours(2*waybill.Distributor.Distance/waybill.Truck.AverageSpeed);
         }
     }
 }

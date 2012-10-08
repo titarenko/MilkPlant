@@ -12,7 +12,7 @@ namespace MilkPlant.EntityBackend
         /// <summary>
         /// Plan period in days.
         /// </summary>
-        private const int PERIOD = 10;
+        private const int PERIOD_LENGTH = 10;
 
         private readonly DataContext context;
 
@@ -23,11 +23,11 @@ namespace MilkPlant.EntityBackend
 
         public IEnumerable<Need> GetCurrentNeeds()
         {
-            var today = Clock.Now.Date;
-            var begin = today.Subtract(TimeSpan.FromDays(PERIOD));
+            var endOfPeriod = Clock.Now.Date;
+            var beginOfPeriod = endOfPeriod.Subtract(TimeSpan.FromDays(PERIOD_LENGTH));
 
             return from item in context.WarehouseOperations
-                       .Where(operation => begin <= operation.Timestamp && operation.Timestamp <= today)
+                       .Where(operation => beginOfPeriod <= operation.Timestamp && operation.Timestamp <= endOfPeriod)
                        .GroupBy(operation => operation.Distributor)
                        .Select(operations =>
                                new
@@ -41,7 +41,7 @@ namespace MilkPlant.EntityBackend
                                                Rate = grouping.Sum(
                                                    operation => operation.Type == WarehouseOperationType.Sold
                                                                     ? operation.Quantity
-                                                                    : 0)/PERIOD,
+                                                                    : 0)/PERIOD_LENGTH,
                                                Stock = grouping.Sum(
                                                    operation => operation.Type == WarehouseOperationType.Delivered
                                                                     ? operation.Quantity
@@ -53,7 +53,7 @@ namespace MilkPlant.EntityBackend
                           {
                               Distributor = item.Distributor,
                               Product = product.Product,
-                              Quantity = product.Rate*PERIOD - product.Stock
+                              Quantity = product.Rate*PERIOD_LENGTH - product.Stock
                           };
         }
     }

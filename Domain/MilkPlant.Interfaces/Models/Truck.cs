@@ -20,6 +20,6 @@ namespace MilkPlant.Interfaces.Models
         /// <summary>
         /// Average speed in km/h.
         /// </summary>
-        public double Speed { get; set; }
+        public double AverageSpeed { get; set; }
     }
 }

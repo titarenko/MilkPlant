@@ -7,7 +7,7 @@ namespace MilkPlant.Interfaces
     public interface IDeliveryManager
     {
         /// <summary>
-        /// Returns delivery plan for given date.
+        /// Returns current delivery plan.
         /// </summary>
         IEnumerable<Waybill> GetDeliveryPlan(DateTime date);
     }

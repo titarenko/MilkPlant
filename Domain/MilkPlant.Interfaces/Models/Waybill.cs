@@ -14,7 +14,7 @@ namespace MilkPlant.Interfaces.Models
         /// <summary>
         /// Date and time when truck will leave company warehouse.
         /// </summary>
-        public DateTime Departure { get; set; }
+        public DateTime DepartureTime { get; set; }
 
         /// <summary>
         /// Destination.
@@ -24,7 +24,7 @@ namespace MilkPlant.Interfaces.Models
         /// <summary>
         /// Items.
         /// </summary>
-        public IList<WaybillItem> WaybillItems { get; set; }
+        public IList<WaybillItem> Items { get; set; }
 
         /// <summary>
         /// Tries to add as much as possible of product items to waybill and returns excess.
@@ -34,12 +34,12 @@ namespace MilkPlant.Interfaces.Models
         /// <returns>Excess (quantity of product items which will not be added to current waybill).</returns>
         public double AddProduct(Product product, double quantity)
         {
-            var load = WaybillItems.Sum(x => x.Quantity);
+            var load = Items.Sum(x => x.Quantity);
             var free = Truck.Capacity - load;
             if (free > 0)
             {
                 var acceptedQuantity = Math.Min(free, quantity);
-                WaybillItems.Add(
+                Items.Add(
                     new WaybillItem
                     {
                         Product = product,
