@@ -9,6 +9,6 @@ namespace MilkPlant.Interfaces
         /// <summary>
         /// Returns delivery plan for given date.
         /// </summary>
-        IEnumerable<DeliveryPlan> GetDeliveryPlan(DateTime date);
+        IEnumerable<Waybill> GetDeliveryPlan(DateTime date);
     }
 }

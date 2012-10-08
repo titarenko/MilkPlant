@@ -11,7 +11,7 @@ namespace MilkPlant.EntityBackend.Infrastructure
 
         public virtual IDbSet<Truck> Trucks { get; set; }
 
-        public virtual IDbSet<DeliveryPlan> DeliveryPlans { get; set; }
+        public virtual IDbSet<Waybill> Waybills { get; set; }
 
         public virtual IDbSet<WarehouseOperation> WarehouseOperations { get; set; }
 

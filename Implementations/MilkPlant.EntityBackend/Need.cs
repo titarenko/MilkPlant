@@ -1,10 +1,12 @@
-﻿namespace MilkPlant.EntityBackend
+﻿using MilkPlant.Interfaces.Models;
+
+namespace MilkPlant.EntityBackend
 {
     public class Need
     {
-        public int DistributorId { get; set; }
+        public Distributor Distributor { get; set; }
 
-        public int ProductId { get; set; }
+        public Product Product { get; set; }
 
         public double Quantity { get; set; }
     }

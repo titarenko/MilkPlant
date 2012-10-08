@@ -39,12 +39,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyWarehouse.cs" />
+    <Compile Include="OutOfStockException.cs" />
+    <Compile Include="OutOfWaybillsException.cs" />
+    <Compile Include="SalesAnalytics.cs" />
     <Compile Include="DeliveryManager.cs" />
     <Compile Include="Infrastructure\DataContext.cs" />
     <Compile Include="Infrastructure\MigrationConfiguration.cs" />
+    <Compile Include="Need.cs" />
+    <Compile Include="TruckLoader.cs" />
     <Compile Include="WarehouseManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferenceDataManager.cs" />
+    <Compile Include="WaybillPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

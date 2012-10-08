@@ -40,12 +40,13 @@
     <Compile Include="IWarehouseManager.cs" />
     <Compile Include="Models\Base\Identifiable.cs" />
     <Compile Include="Models\Base\Named.cs" />
-    <Compile Include="Models\DeliveryPlan.cs" />
     <Compile Include="Models\Distributor.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Truck.cs" />
     <Compile Include="Models\WarehouseOperation.cs" />
     <Compile Include="Models\WarehouseOperationType.cs" />
+    <Compile Include="Models\Waybill.cs" />
+    <Compile Include="Models\WaybillItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
